@@ -1,10 +1,10 @@
-import cart from "../assets/cart.png";
+import cart from "../assets/negro.png"
 
 export const CartWidget = () => {
   return (
-    <>
-      <img src={cart} alt="Cart" />
-      <span>0</span>
-    </>
+    <div id="cart">
+      <img src={cart} alt="Cart" width={40}/>
+      <span>2</span>
+    </div>
   );
 };
