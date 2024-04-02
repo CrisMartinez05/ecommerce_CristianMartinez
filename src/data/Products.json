@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "title": "Remera",
+        "description": "Remera Running Fast, confeccionadas con tela deportiva tipo Dryfit, ideal para salir a correr, ir al gym y para todo tipo de actividad deportiva.No apta para uso intensivo de entrenamiento de rugby.",
+        "price": "29800",
+        "pictureUrl":"https://acdn.mitiendanube.com/stores/002/070/429/products/fast031-9b6aac21cfad4e700116655870434357-480-0.webp"
+    },
+    {
+        "id": 1,
+        "title": "Zapatillas",
+        "description": "Ajuste ligero con la suela Adiwear y un refuerzo 3D en el talón para mayor estabilidad. El exterior de malla y el acolchado garantizan máxima comodidad. Su exterior contiene al menos un 50% de materiales reciclados.",
+        "price": "29800",
+        "pictureUrl":"https://acdn.mitiendanube.com/stores/002/070/429/products/fast031-9b6aac21cfad4e700116655870434357-480-0.webp"
+    },
+    {
+        "id": 1,
+        "title": "Mochila",
+        "description": "Es el accesorio por excelencia, ya que es el que nos permite llevar casi todo lo demás.",
+        "price": "89000",
+        "pictureUrl":"https://www.forumsport.com/es-es/blogs/running/wp-content/uploads/sites/2/2017/10/mochila_nathan.jpg"
+    }
+]
