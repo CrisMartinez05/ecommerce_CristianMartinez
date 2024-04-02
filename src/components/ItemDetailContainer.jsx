@@ -1,3 +1,7 @@
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+import { Link } from "react-router-dom";
+
 import { useEffect, useState } from "react";
 
 import Container from "react-bootstrap/Container";
@@ -7,7 +11,7 @@ import data from "../data/products.json";
 export const ItemDetailContainer = () => {
   const [product, setProduct] = useState(null);
 
-  const {id}=useParams();
+  const { id } = useParams();
 
   useEffect(() => {
     const get = new Promise((resolve, reject) => {
@@ -20,13 +24,24 @@ export const ItemDetailContainer = () => {
     });
   }, [id]);
 
-  if(!product) return <div>Loading</div>;
+  if (!product) return <div>Loading</div>;
 
   return (
     <Container className="mt-4">
-      <h1>{product.title}</h1>
-      <img src={product.pictureUrl} alt="#" />
-     <h2><span>$ </span>{product.price}</h2> 
-   </Container>   
+      <Card style={{ width: "18rem" }}>
+        <Card.Img variant="top" src={product.pictureUrl} />
+        <Card.Body>
+          <Card.Title>{product.title}</Card.Title>
+          <Card.Title>
+            <span>$ </span>
+            {product.price}
+          </Card.Title>
+          <Card.Text>{product.description}</Card.Text>
+          <Link to={`/`}>
+            <Button variant="primary">Volver</Button>
+          </Link>
+        </Card.Body>
+      </Card>
+    </Container>
   );
 };

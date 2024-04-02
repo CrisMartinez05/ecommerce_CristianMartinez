@@ -1,44 +1,42 @@
 [
-    {
-        "id": 1,
-        "title": "Running Fast Network",
-        "description": "Remera Running Fast, confeccionadas con tela deportiva tipo Dryfit, ideal para salir a correr, ir al gym y para todo tipo de actividad deportiva.No apta para uso intensivo de entrenamiento de rugby.",
-        "price": "29800",
-        "pictureUrl":"https://acdn.mitiendanube.com/stores/002/070/429/products/fast031-9b6aac21cfad4e700116655870434357-480-0.webp",
-        "category":"indumentaria"
-    },
-    {
-        "id": 2,
-        "title": "Adidas Switch Run",
-        "description": "Ajuste ligero con la suela Adiwear y un refuerzo 3D en el talón para mayor estabilidad. El exterior de malla y el acolchado garantizan máxima comodidad. Su exterior contiene al menos un 50% de materiales reciclados.",
-        "price": "114999",
-        "pictureUrl":"https://assets.adidas.com/images/w_600,f_auto,q_auto/5c6d4962fd0948ef8dd6f7a9398000e0_9366/Zapatillas_Running_Switch_Run_Blanco_IF5734_HM1.jpg",
-        "category":"calzado"
-        
-    },
-    {
-        "id": 3,
-        "title": "Nathan Firecatcher Race Vest",
-        "description": "Es el accesorio por excelencia, ya que es el que nos permite llevar casi todo lo demás.",
-        "price": "89000",
-        "pictureUrl":"https://www.forumsport.com/es-es/blogs/running/wp-content/uploads/sites/2/2017/10/mochila_nathan.jpg",
-        "category": "accesorios"
-
-    },
-    {
-        "id": 4,
-        "title": "Argentina Home RWC 2023",
-        "description": "Fabricadas con tejidos específicamente, creados y pensados para la práctica del rugby en poliéster, que incorpora asimismo un tratamiento para la rápida absorción y secado del sudor, con lo que obtenemos un equipamiento de alta calidad, resistente y transpirable.",
-        "price": "37000",
-        "pictureUrl":"https://acdn.mitiendanube.com/stores/002/070/429/products/pumas-home-rwc-2023-frente1-21b2fd0fda315394b816880609877564-1024-1024.webp",
-        "category":"indumentaria"
-    },
-    {
-        "id": 5,
-        "title": "Adidas UltraBoost Light 23",
-        "description": "Una nueva generación de adidas BOOST. Su exclusivo diseño molecular convierte a la espuma BOOST en la más ligera. Con cientos de cápsulas BOOST llenas de energía y lo último en amortiguación y comodidad, algunos pies realmente pueden tenerlo todo.",
-        "price": "263999",
-        "pictureUrl":"https://assets.adidas.com/images/w_303,h_303,f_auto,q_auto,fl_lossy,c_fill,g_auto/a45e6248a34a40b1abdea7c074e9c045_9366/zapatillas-ultraboost-light-23.jpg",
-        "category":"calzado"
-    }
+  {
+    "id": 1,
+    "title": "Running Fast Network",
+    "description": "Confeccionada con tela deportiva tipo Dryfit, ideal para salir a correr, ir al gym y para todo tipo de actividad deportiva.No apta para uso intensivo de entrenamiento de rugby.",
+    "price": "29800",
+    "pictureUrl": "https://acdn.mitiendanube.com/stores/002/070/429/products/fast031-9b6aac21cfad4e700116655870434357-480-0.webp",
+    "category": "indumentaria"
+  },
+  {
+    "id": 2,
+    "title": "Adidas Switch Run",
+    "description": "Ajuste ligero con la suela Adiwear y un refuerzo 3D en el talón para mayor estabilidad. El exterior de malla y el acolchado interior garantizan máxima comodidad. Su exterior contiene al menos un 50% de materiales reciclados.",
+    "price": "114999",
+    "pictureUrl": "https://assets.adidas.com/images/w_600,f_auto,q_auto/5c6d4962fd0948ef8dd6f7a9398000e0_9366/Zapatillas_Running_Switch_Run_Blanco_IF5734_HM1.jpg",
+    "category": "calzado"
+  },
+  {
+    "id": 3,
+    "title": "Nathan Firecatcher Race Vest",
+    "description": "Es el accesorio por excelencia, ya que es el que nos permite llevar casi todo lo que necesitamos.",
+    "price": "89000",
+    "pictureUrl": "https://www.forumsport.com/es-es/blogs/running/wp-content/uploads/sites/2/2017/10/mochila_nathan.jpg",
+    "category": "accesorios"
+  },
+  {
+    "id": 4,
+    "title": "Argentina Home RWC 2023",
+    "description": "Fabricada con tejidos específicamente creados y pensados para la práctica de rugby. En poliéster que incorpora un tratamiento para la rápida absorción y secado del sudor, con lo que obtenemos un equipamiento de alta calidad, resistente y transpirable.",
+    "price": "37000",
+    "pictureUrl": "https://acdn.mitiendanube.com/stores/002/070/429/products/pumas-home-rwc-2023-frente1-21b2fd0fda315394b816880609877564-1024-1024.webp",
+    "category": "indumentaria"
+  },
+  {
+    "id": 5,
+    "title": "Adidas UltraBoost Light 23",
+    "description": "Una nueva generación de adidas BOOST. Su exclusivo diseño molecular convierte a la espuma BOOST en la más ligera. Con cientos de cápsulas BOOST llenas de energía y lo último en amortiguación y comodidad... Algunos pies realmente pueden tenerlo todo...",
+    "price": "263999",
+    "pictureUrl": "https://assets.adidas.com/images/w_303,h_303,f_auto,q_auto,fl_lossy,c_fill,g_auto/a45e6248a34a40b1abdea7c074e9c045_9366/zapatillas-ultraboost-light-23.jpg",
+    "category": "calzado"
+  }
 ]

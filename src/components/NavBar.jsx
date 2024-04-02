@@ -9,14 +9,22 @@ export const NavBar = () => {
   return (
     <Navbar bg="dark" data-bs-theme="dark">
       <Container>
-        <Navbar.Brand to="/" as={NavLink}>Vivir Fitness</Navbar.Brand>
+        <Navbar.Brand to="/" as={NavLink}>
+          Vivir Fitness
+        </Navbar.Brand>
         <Nav className="me-auto">
-          <Nav.Link to="/category/indumentaria" as={NavLink}>Indumentaria</Nav.Link>
-          <Nav.Link to="/category/calzado" as={NavLink}>Calzado</Nav.Link>
-          <Nav.Link to="/category/accesorios" as={NavLink}>Accesorios</Nav.Link>
+          <Nav.Link to="/category/indumentaria" as={NavLink}>
+            Indumentaria
+          </Nav.Link>
+          <Nav.Link to="/category/calzado" as={NavLink}>
+            Calzado
+          </Nav.Link>
+          <Nav.Link to="/category/accesorios" as={NavLink}>
+            Accesorios
+          </Nav.Link>
         </Nav>
         <CartWidget />
       </Container>
     </Navbar>
-      );
+  );
 };
