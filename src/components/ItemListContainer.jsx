@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import { ItemList } from "./ItemList";
 import { useParams } from "react-router-dom";
-
+import { getFirestore, getDocs, collection, query, where } from "firebase/firestore";
 import data from "../data/products.json";
 
 export const ItemListContainer = () => {
@@ -12,19 +12,30 @@ export const ItemListContainer = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    const get = new Promise((resolve, reject) => {
-      setTimeout(() => resolve(data), 2000);
+    const db = getFirestore();
+
+  let refCollection;
+  
+    if(!id){
+      refCollection = collection(db, "items");
+    }else{
+      refCollection = query(
+        collection(db, "items"), where(
+          "categoryId", "==", id
+        )
+      );
+    };
+    getDocs(refCollection).then((snapshot) => {
+      setProducts(
+        snapshot.docs.map((doc) => {
+          return ({id: doc.id, ... doc.data()});
+        })
+      );
     });
 
-    get.then((data) => {
-      if (!id) {
-        setProducts(data);
-      } else {
-        const filtered = data.filter((p) => p.category === id);
-        setProducts(filtered);
-      }
-    });
-  }, [id]);
+   }, [id]
+    
+);
 
   return (
     <Container className="mt-4">

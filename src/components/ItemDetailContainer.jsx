@@ -29,7 +29,7 @@ export const ItemDetailContainer = () => {
   return (
     <Container className="mt-4">
       <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={product.pictureUrl} />
+        <Card.Img variant="top" src={product.image} />
         <Card.Body>
           <Card.Title>{product.title}</Card.Title>
           <Card.Title>
