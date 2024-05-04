@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import { ItemList } from "./ItemList";
 import { useParams } from "react-router-dom";
 import { getFirestore, getDocs, collection, query, where } from "firebase/firestore";
-import data from "../data/products.json";
+
 
 export const ItemListContainer = () => {
   const [products, setProducts] = useState([]);

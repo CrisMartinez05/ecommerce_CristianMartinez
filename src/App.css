@@ -11,7 +11,14 @@ div .itemList {
   justify-content: center;
 }
 
-div .verDetalle {
+div .boton {
   display: flex;
   justify-content: center;
+}
+
+.spinner-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
