@@ -3,11 +3,15 @@ import { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import { ItemList } from "./ItemList";
 import { useParams } from "react-router-dom";
-import { getFirestore, getDocs, collection, query, where } from "firebase/firestore";
-
+import {
+  getFirestore,
+  getDocs,
+  collection,
+  query,
+  where,
+} from "firebase/firestore";
 
 export const ItemListContainer = () => {
-  
   const [items, setItems] = useState([]);
 
   const { id } = useParams();
@@ -15,28 +19,24 @@ export const ItemListContainer = () => {
   useEffect(() => {
     const db = getFirestore();
 
-  let refCollection;
-  
-    if(!id){
+    let refCollection;
+
+    if (!id) {
       refCollection = collection(db, "items");
-    }else{
+    } else {
       refCollection = query(
-        collection(db, "items"), where(
-          "categoryId", "==", id
-        )
+        collection(db, "items"),
+        where("categoryId", "==", id)
       );
-    };
+    }
     getDocs(refCollection).then((snapshot) => {
       setItems(
         snapshot.docs.map((doc) => {
-          return ({id: doc.id, ... doc.data()});
+          return { id: doc.id, ...doc.data() };
         })
       );
     });
-
-   }, [id]
-    
-);
+  }, [id]);
 
   return (
     <Container className="mt-4">
@@ -44,4 +44,3 @@ export const ItemListContainer = () => {
     </Container>
   );
 };
-
