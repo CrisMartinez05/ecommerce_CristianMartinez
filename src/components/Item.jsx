@@ -3,19 +3,19 @@ import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 
 
-export const Item = ({ product }) => (
+export const Item = ({ item }) => (
   <Card style={{ width: "18rem" }}>
-    <Card.Img variant="top" src={product.image}/>
+    <Card.Img variant="top" src={item.image}/>
     <Card.Body>
-      <Card.Title>{product.title}</Card.Title>
+      <Card.Title>{item.title}</Card.Title>
       <br />
       <Card.Title>
         <span>$ </span>
-        {product.price}
+        {item.price}
       </Card.Title>
     </Card.Body>
     <div className="boton">
-      <Link to={`/item/${product.id}`}>
+      <Link to={`/item/${item.id}`}>
         <Button variant="dark">Ver Detalle</Button>
       </Link>
     </div>

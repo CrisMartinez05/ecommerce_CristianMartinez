@@ -7,7 +7,7 @@ import Spinner from "react-bootstrap/Spinner";
 import { ItemDetail } from "./ItemDetail";
 
 export const ItemDetailContainer = () => {
-  const [product, setProduct] = useState(null);
+  const [item, setItem] = useState(null);
 
   const { id } = useParams();
 
@@ -17,11 +17,11 @@ export const ItemDetailContainer = () => {
     const refDoc = doc(db, "items", id);
 
     getDoc(refDoc).then((snapshot) => {
-      setProduct({ id: snapshot.id, ...snapshot.data() });
+      setItem({ id: snapshot.id, ...snapshot.data() });
     });
   }, [id]);
 
-  if (!product) {
+  if (!item) {
     return (
       <div className="spinner-container">
         <Button variant="dark" disabled>
@@ -38,5 +38,5 @@ export const ItemDetailContainer = () => {
     );
   }
 
-  return <ItemDetail product={product} />;
+  return <ItemDetail item={item} />;
 };

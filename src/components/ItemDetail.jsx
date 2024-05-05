@@ -5,24 +5,29 @@ import { Link } from "react-router-dom";
 
 import { ItemCount } from "./ItemCount";
 
-export const ItemDetail = ({ product }) => {
+export const ItemDetail = ({ item }) => {
+
+  const add = (quantity) => {
+    console.log(item, quantity);
+  };
+
   return (
-    <Container className="mt-4">
+    <Container className="mt-4 d-flex">
       <Card style={{ width: "25rem" }}>
-        <Card.Img variant="top" src={product.image} />
+        <Card.Img variant="top" src={item.image} />
         <Card.Body>
-          <Card.Title>{product.title}</Card.Title>
+          <Card.Title>{item.title}</Card.Title>
           <Card.Title>
             <span>$ </span>
-            {product.price}
+            {item.price}
           </Card.Title>
-          <Card.Text>{product.description}</Card.Text>
+          <Card.Text>{item.description}</Card.Text>
           <Card.Text className="h5">
             <span>Stock: </span>
-            {product.stock}
+            {item.stock}
             <span> un.</span>
           </Card.Text>
-          <ItemCount/>
+          <ItemCount initial={0} stock={item.stock} onAdd={add} />
         </Card.Body>
         <div className="boton">
           <Link to={`/`}>

@@ -1,6 +1,7 @@
 import { useState } from "react";
+import Button from 'react-bootstrap/Button';
 
-export const ItemCount = ({ stock, initial, onAdd }) => {
+export const ItemCount = ({ initial, stock, onAdd }) => {
   const [quantity, setQuantity] = useState(initial);
 
   const increment = () => {
@@ -17,23 +18,26 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
 
   return (
     <div className="Counter">
-      <div className="Controls">
-        <button className="Button" onClick={decrement}>
+      <div className="d-flex">
+        <Button variant="dark" onClick={decrement}>
           -
-        </button>
-        <h4 className="Number">{quantity}</h4>
-        <button className="Button" onClick={increment}>
+        </Button>
+        <h4 className="Number">{`  ${quantity}  `}</h4>
+        <Button variant="dark" onClick={increment}>
           +
-        </button>
+        </Button>
       </div>
-      <div>
-        <button
-          className="Button"
-          onClick={() => onAdd(quantity)}
+      <div className="d-flex">
+        <Button variant="dark"
+          onClick={() => {
+            onAdd(quantity);
+            setQuantity(initial);
+          }
+          }
           disabled={!stock}
         >
           Agregar al carrito
-        </button>
+        </Button>
       </div>
     </div>
   );
