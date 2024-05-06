@@ -1,6 +1,10 @@
 import Container from "react-bootstrap/Container";
 import { useContext, useState } from "react";
 import Table from "react-bootstrap/Table";
+import Button from "react-bootstrap/Button";
+import Col from "react-bootstrap/Col";
+import Form from "react-bootstrap/Form";
+import Row from "react-bootstrap/Row";
 
 import { CartContext } from "../contexts/CartContext";
 import { collection, getFirestore, addDoc } from "firebase/firestore";
@@ -82,38 +86,49 @@ export const Cart = () => {
       })}
       <div>Total: {total()}</div>
       <br />
-      <button type="button" onClick={handleClear}>
+      <Button variant="dark" type="button" onClick={handleClear}>
         Vaciar Carrito
-      </button>
+      </Button>
       <br />
       <hr />
       {items?.length > 0 && (
-        <form>
-          <label>Nombre</label>
-          <input
-            type="text"
-            value={values.name}
-            name="name"
-            onChange={handleChange}
-          />
-          <label>Celular</label>
-          <input
-            type="text"
-            value={values.phone}
-            name="phone"
-            onChange={handleChange}
-          />
-          <label>Email</label>
-          <input
-            type="text"
-            value={values.email}
-            name="email"
-            onChange={handleChange}
-          />
-          <button type="button" onClick={handleSubmit}>
+        <Form>
+          <Row>
+            <Col>
+              <Form.Control
+                placeholder="Nombre y Apellido"
+                name="name"
+                value={values.name}
+                onChange={handleChange}
+              />
+            </Col>
+            <Col>
+              <Form.Control
+                placeholder="Celular"
+                name="phone"
+                value={values.phone}
+                onChange={handleChange}
+              />
+            </Col>
+          </Row>
+            <br />
+          <Row>
+            <Col>
+              <Form.Control
+                placeholder="Email"
+                name="email"
+                value={values.email}
+                onChange={handleChange}
+              />
+            </Col>
+          </Row>
+          <hr />
+          <div className="d-flex">
+          <Button variant="dark" type="button" onClick={handleSubmit}>
             Enviar
-          </button>
-        </form>
+          </Button>
+          </div>
+        </Form>
       )}
     </Container>
   );
