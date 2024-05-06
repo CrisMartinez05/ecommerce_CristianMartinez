@@ -33,8 +33,6 @@ export const Cart = () => {
       total: total(),
     };
 
-    console.log(order);
-
     const db = getFirestore();
     const orderCollection = collection(db, "orders");
 
@@ -66,9 +64,11 @@ export const Cart = () => {
           </ul>
         );
       })}
-      <div>Total: {total()}</div>      
+      <div>Total: {total()}</div>
       <br />
-      <button type="button" onClick={handleClear}>Vaciar Carrito</button>
+      <button type="button" onClick={handleClear}>
+        Vaciar Carrito
+      </button>
       <br />
       <hr />
       {items?.length > 0 && (

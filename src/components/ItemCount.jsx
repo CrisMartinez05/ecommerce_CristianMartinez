@@ -16,11 +16,6 @@ export const ItemCount = ({ initial, stock, onAdd }) => {
     }
   };
 
-  const handleAdd = () => {
-    onAdd(quantity);
-    setQuantity(initial);
-  }
-
   return (
     <div className="Counter">
       <div className="d-flex">
@@ -40,13 +35,11 @@ export const ItemCount = ({ initial, stock, onAdd }) => {
           onClick={() => {
             onAdd(quantity);
             setQuantity(initial);
-          }
-        }
+          }}
           disabled={!stock}
         >
           Agregar al carrito
         </Button>
-        
       </div>
     </div>
   );
