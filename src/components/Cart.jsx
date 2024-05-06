@@ -1,5 +1,6 @@
 import Container from "react-bootstrap/Container";
 import { useContext, useState } from "react";
+import Table from "react-bootstrap/Table";
 
 import { CartContext } from "../contexts/CartContext";
 import { collection, getFirestore, addDoc } from "firebase/firestore";
@@ -54,14 +55,29 @@ export const Cart = () => {
   return (
     <Container className="mt-4">
       <h1>Productos</h1>
+      <Table striped bordered hover>
+        <thead>
+          <tr>
+            <th>Detalle</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th>Eliminar</th>
+          </tr>
+        </thead>
+      </Table>
+
       {items.map((i) => {
         return (
-          <ul key={i.title}>
-            <li>Prod: {i.title}</li>
-            <li>Cant: {i.quantity}</li>
-            <li>$ {i.price}</li>
-            <li onClick={() => handleRemove(i.id)}>X</li>
-          </ul>
+          <Table striped bordered hover key={i.title}>
+            <tbody>
+              <tr>
+                <td>{i.title}</td>
+                <td>{i.quantity}</td>
+                <td>{i.price}</td>
+                <td onClick={() => handleRemove(i.id)}>X</td>
+              </tr>
+            </tbody>
+          </Table>
         );
       })}
       <div>Total: {total()}</div>
